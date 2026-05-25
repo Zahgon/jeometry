@@ -59,7 +59,6 @@ public final class VectsDegrees<T> implements Degrees<T> {
 
     @Override
     public Number resolve(final InnerProduct<T> product) {
-        return product.angle(this.first, this.second).resolve(product);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

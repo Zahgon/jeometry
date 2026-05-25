@@ -60,30 +60,16 @@ class MouseZoomTranslate extends MouseAdapter {
 
     @Override
     public void mousePressed(final MouseEvent event) {
-        this.startx = event.getX();
-        this.starty = event.getY();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void mouseDragged(final MouseEvent event) {
-        final double scale = this.awt.context().scale();
-        this.awt.translate(
-            (this.startx - event.getX()) / scale,
-            (event.getY() - this.starty) / scale
-        );
-        this.startx = event.getX();
-        this.starty = event.getY();
-        this.awt.repaint();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void mouseWheelMoved(final MouseWheelEvent event) {
-        if (event.getWheelRotation() < 0) {
-            this.awt.zoomIn();
-        } else {
-            this.awt.zoomOut();
-        }
-        this.awt.repaint();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

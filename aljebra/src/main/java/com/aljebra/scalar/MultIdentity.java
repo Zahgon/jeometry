@@ -36,7 +36,6 @@ public final class MultIdentity<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        return field.multiplication().neutral();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

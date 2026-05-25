@@ -51,12 +51,11 @@ public final class RayLine<T> implements Line<T> {
 
     @Override
     public Vect<T> direction() {
-        return this.ray.direction();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> point() {
-        return this.ray.origin();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

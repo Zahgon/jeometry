@@ -36,17 +36,16 @@ public final class DefaultStroke implements Stroke {
 
     @Override
     public float width() {
-        return 1.f;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Color color() {
-        return Color.BLACK;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Dash dash() {
-        return Dash.SOLID;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

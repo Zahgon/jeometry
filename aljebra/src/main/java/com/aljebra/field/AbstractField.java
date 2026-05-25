@@ -47,33 +47,28 @@ public abstract class AbstractField<T> implements Field<T> {
      * @param add Field addition
      * @param mul Field multiplication
      */
-    public AbstractField(final FieldAddition<T> add,
-        final FieldMultiplication<T> mul) {
+    public AbstractField(final FieldAddition<T> add, final FieldMultiplication<T> mul) {
         this.add = add;
         this.mult = mul;
     }
 
     @Override
     public final Scalar<T> other(final Scalar<T> scalar) {
-        Scalar<T> result = this.random();
-        while (this.equals(result, scalar)) {
-            result = this.random();
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final T actual(final Scalar<T> scalar) {
-        return scalar.value(this);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final FieldAddition<T> addition() {
-        return this.add;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final FieldMultiplication<T> multiplication() {
-        return this.mult;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

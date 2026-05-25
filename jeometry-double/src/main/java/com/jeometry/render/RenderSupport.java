@@ -58,11 +58,8 @@ public final class RenderSupport implements Renderer {
     }
 
     @Override
-    public void render(final Shape<?> renderable, final Surface context,
-        final Graphics2D graphics) {
-        if (this.supports(renderable)) {
-            this.origin.render(renderable, context, graphics);
-        }
+    public void render(final Shape<?> renderable, final Surface context, final Graphics2D graphics) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -80,5 +77,4 @@ public final class RenderSupport implements Renderer {
         }
         return result;
     }
-
 }

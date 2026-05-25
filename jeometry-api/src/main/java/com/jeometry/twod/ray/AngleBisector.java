@@ -51,12 +51,11 @@ public final class AngleBisector<T> implements Ray<T> {
 
     @Override
     public Vect<T> direction() {
-        return new BisectorVect<>(this.angle.start(), this.angle.end());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> origin() {
-        return this.angle.origin();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

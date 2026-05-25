@@ -34,8 +34,7 @@ import com.aljebra.scalar.Scalar;
  * A {@link Field} implementation based on double.
  * @since 0.1
  */
-public final class Decimal
-    extends AbstractOrderedField<Double> implements MetricSpaceField<Double> {
+public final class Decimal extends AbstractOrderedField<Double> implements MetricSpaceField<Double> {
 
     /**
      * Minimum value to generate when randomizing a scalar.
@@ -69,21 +68,16 @@ public final class Decimal
 
     @Override
     public Scalar<Double> random() {
-        return this.between(
-            new Scalar.Default<Double>(Decimal.MINBOUND),
-            new Scalar.Default<Double>(Decimal.MAXBOUND)
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(final Scalar<Double> first, final Scalar<Double> second) {
-        return Math.abs(
-            this.actual(first) - this.actual(second)
-        ) < Decimal.TOLERANCE;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public InnerProduct<Double> product() {
-        return new Dot();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

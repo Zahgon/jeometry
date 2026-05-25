@@ -58,8 +58,6 @@ public final class Times<T> implements Degrees<T> {
 
     @Override
     public Number resolve(final InnerProduct<T> product) {
-        return this.angle.resolve(product).doubleValue()
-            * this.multiple.doubleValue();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

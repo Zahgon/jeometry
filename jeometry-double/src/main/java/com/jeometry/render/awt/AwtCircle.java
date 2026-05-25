@@ -54,17 +54,7 @@ public final class AwtCircle extends AbstractAwtPaint<Circle<Double>> {
     }
 
     @Override
-    public void draw(final Shape<Circle<Double>> renderable, final Graphics2D graphics,
-        final Surface context) {
-        final Circle<Double> circle = renderable.renderable();
-        final int size = (int) (context.scale() * this.field().actual(
-            circle.radius()
-        ));
-        final Point center = new Transform(context)
-            .transform(circle.center());
-        graphics.drawOval(center.x - size, center.y - size, 2 * size, 2 * size);
-        graphics.setColor(renderable.style().fill().color());
-        graphics.fillOval(center.x - size, center.y - size, 2 * size, 2 * size);
+    public void draw(final Shape<Circle<Double>> renderable, final Graphics2D graphics, final Surface context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

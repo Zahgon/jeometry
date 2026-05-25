@@ -55,7 +55,6 @@ public final class Equals<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        return field.equals(this.first, this.second);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -43,12 +43,6 @@ public abstract class MetricScalar<T> implements Scalar<T> {
 
     @Override
     public final T value(final Field<T> field) {
-        if (field instanceof MetricSpaceField<?>) {
-            return this.value((MetricSpaceField<T>) field);
-        } else {
-            throw new UnsupportedOperationException(
-                String.format("Field %s is not a metric space field", field)
-            );
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

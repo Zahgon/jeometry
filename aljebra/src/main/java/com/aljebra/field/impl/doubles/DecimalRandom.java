@@ -61,25 +61,16 @@ public final class DecimalRandom implements OrderedRandom<Double> {
 
     @Override
     public Double between(final Double lower, final Double upper) {
-        if (lower > upper) {
-            throw new IllegalArgumentException(
-                String.format(
-                    "Could not get an element greater than %s and less than %s",
-                    lower, upper
-                )
-            );
-        }
-        return this.rand.nextDouble() * (upper - lower) + lower;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Double greater(final Double lower) {
-        return this.between(lower, this.max);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Double lower(final Double upper) {
-        return this.between(this.min, upper);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -37,6 +37,7 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 public final class Minus<T> implements Vect<T> {
+
     /**
      * First operand.
      */
@@ -59,13 +60,7 @@ public final class Minus<T> implements Vect<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        final Scalar<T>[] coords = this.first.coords();
-        final int dim = coords.length;
-        final Scalar<T>[] result = Arrays.copyOf(coords, dim);
-        for (int axis = 0; axis < dim; ++axis) {
-            result[axis] = this.dimension(axis);
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**

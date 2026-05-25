@@ -33,16 +33,16 @@ public final class DblAddition implements FieldAddition<Double> {
 
     @Override
     public Double add(final Double operand, final Double second) {
-        return operand + second;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Double neutral() {
-        return 0.;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Double inverse(final Double elt) {
-        return -elt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -66,13 +66,7 @@ public final class Sum<T> implements Vect<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        final Scalar<T>[] coords = this.operands.iterator().next().coords();
-        final int dim = coords.length;
-        final Scalar<T>[] result = Arrays.copyOf(coords, dim);
-        for (int axis = 0; axis < dim; ++axis) {
-            result[axis] = this.dimension(axis);
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**

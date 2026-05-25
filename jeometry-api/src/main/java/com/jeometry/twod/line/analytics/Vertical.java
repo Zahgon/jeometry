@@ -72,9 +72,6 @@ public final class Vertical<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        return field.equals(
-            this.line.direction().coords()[0], new AddIdentity<>()
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

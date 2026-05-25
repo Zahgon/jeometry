@@ -74,19 +74,6 @@ public final class AxisPaint {
      * @param graphics Awt graphics
      */
     public void paint(final Graphics2D graphics) {
-        final DblPoint origin = new DblPoint(0., 0.);
-        final Shape<Line<Double>> xaxis = new Shape<>(
-            new PtDirLine<>(origin, new DblPoint(1.0, 0.))
-        );
-        final Shape<Line<Double>> yaxis = new Shape<>(
-            new PtDirLine<>(origin, new DblPoint(0., 1.))
-        );
-        final Color color = graphics.getColor();
-        graphics.setStroke(new AwtStroke(new DefaultStroke()));
-        graphics.setColor(Color.RED);
-        new AwtLine(this.field).draw(xaxis, graphics, this.ctx);
-        new AwtLine(this.field).draw(yaxis, graphics, this.ctx);
-        graphics.setColor(color);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

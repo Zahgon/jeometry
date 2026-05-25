@@ -55,12 +55,7 @@ public final class AwtPoint extends AbstractAwtPaint<XyPoint<Double>> {
     }
 
     @Override
-    public void draw(final Shape<XyPoint<Double>> renderable, final Graphics2D graphics,
-        final Surface context) {
-        final int size = 4;
-        final Vect<Double> point = renderable.renderable();
-        final Point awtpt = new Transform(context).transform(point);
-        graphics.drawRect(awtpt.x - size / 2, awtpt.y - size / 2, size, size);
+    public void draw(final Shape<XyPoint<Double>> renderable, final Graphics2D graphics, final Surface context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

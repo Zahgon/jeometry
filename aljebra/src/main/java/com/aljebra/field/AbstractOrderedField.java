@@ -31,8 +31,7 @@ import com.aljebra.scalar.Scalar;
  * @param <T> The actual objects constituting the field.
  * @since 0.1
  */
-public abstract class AbstractOrderedField<T> extends
-    AbstractField<T> implements OrderedField<T> {
+public abstract class AbstractOrderedField<T> extends AbstractField<T> implements OrderedField<T> {
 
     /**
      * Randomizer.
@@ -45,27 +44,23 @@ public abstract class AbstractOrderedField<T> extends
      * @param mul Field multiplication
      * @param random Ordered randomizer implementation
      */
-    public AbstractOrderedField(final FieldAddition<T> add,
-        final FieldMultiplication<T> mul, final OrderedRandom<T> random) {
+    public AbstractOrderedField(final FieldAddition<T> add, final FieldMultiplication<T> mul, final OrderedRandom<T> random) {
         super(add, mul);
         this.random = random;
     }
 
     @Override
     public final Scalar<T> between(final Scalar<T> lower, final Scalar<T> upper) {
-        final T min = this.actual(lower);
-        final T max = this.actual(upper);
-        return new Scalar.Default<T>(this.random.between(min, max));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Scalar<T> greater(final Scalar<T> lower) {
-        return new Scalar.Default<T>(this.random.greater(this.actual(lower)));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Scalar<T> lower(final Scalar<T> upper) {
-        return new Scalar.Default<T>(this.random.lower(this.actual(upper)));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

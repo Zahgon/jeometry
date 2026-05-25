@@ -47,7 +47,6 @@ public final class FixedColorFill implements Fill {
 
     @Override
     public Color color() {
-        return this.clr;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

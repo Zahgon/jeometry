@@ -33,19 +33,16 @@ public final class DblMult implements FieldMultiplication<Double> {
 
     @Override
     public Double multiply(final Double operand, final Double second) {
-        return operand * second;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Double neutral() {
-        return 1.;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Double inverse(final Double elt) {
-        if (Double.valueOf(0).equals(elt)) {
-            throw new IllegalArgumentException("Division by zero");
-        }
-        return 1. / elt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -34,6 +34,7 @@ import lombok.ToString;
  */
 @ToString(includeFieldNames = false)
 public final class ParallelLine<T> implements Line<T> {
+
     /**
      * The line to be parallel to.
      */
@@ -64,12 +65,11 @@ public final class ParallelLine<T> implements Line<T> {
 
     @Override
     public Vect<T> direction() {
-        return this.parallel.direction();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> point() {
-        return this.pnt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

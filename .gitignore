@@ -4,3 +4,8 @@
 /.classpath
 /.project
 /pom2.xml
+
+.aider*
+logs/
+.commit0_scripts/
+.github/workflows/

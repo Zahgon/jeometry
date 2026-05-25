@@ -77,17 +77,16 @@ public final class FixedStroke implements Stroke {
 
     @Override
     public float width() {
-        return this.wdth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Color color() {
-        return this.clr;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Dash dash() {
-        return this.dsh;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -52,8 +52,7 @@ public final class ZoomOutButton extends JButton {
      * @return This button
      */
     public JButton react(final AwtDrawableSurface drawable) {
-        this.addMouseListener(new ZoomOutButton.Listener(drawable));
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -61,6 +60,7 @@ public final class ZoomOutButton extends JButton {
      * @since 0.4
      */
     private static final class Listener extends MouseAdapter {
+
         /**
          * Drawable surface.
          */
@@ -76,8 +76,7 @@ public final class ZoomOutButton extends JButton {
 
         @Override
         public void mouseClicked(final MouseEvent event) {
-            this.drawable.zoomOut();
-            this.drawable.repaint();
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

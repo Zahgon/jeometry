@@ -61,14 +61,6 @@ public final class Buttons extends JPanel {
      * @return This buttons JPanel
      */
     public JPanel init() {
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        this.add(new TranslationButton("up", 0, Buttons.TRANSLATE_AMOUNT).react(this.drawable));
-        this.add(new TranslationButton("down", 0, -Buttons.TRANSLATE_AMOUNT).react(this.drawable));
-        this.add(new TranslationButton("right", Buttons.TRANSLATE_AMOUNT, 0).react(this.drawable));
-        this.add(new TranslationButton("left", -Buttons.TRANSLATE_AMOUNT, 0).react(this.drawable));
-        this.add(new ZoomInButton("zoomin").react(this.drawable));
-        this.add(new ZoomOutButton("zoomout").react(this.drawable));
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

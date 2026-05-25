@@ -69,18 +69,6 @@ public final class Perpendicular<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        if (field instanceof MetricSpaceField<?>) {
-            final Double degrees = new VectsDegrees<>(
-                this.first, this.second
-            ).resolve(((MetricSpaceField<T>) field).product()).doubleValue();
-            final double error = 1.e-6;
-            return Math.abs(degrees - Math.PI / 2) < error
-                || Math.abs(degrees + Math.PI / 2) < error;
-        } else {
-            throw new UnsupportedOperationException(
-                String.format("Field %s is not a metric space field", field)
-            );
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

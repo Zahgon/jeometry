@@ -54,13 +54,7 @@ public final class AwtSegment extends AbstractAwtPaint<Segment<Double>> {
     }
 
     @Override
-    public void draw(final Shape<Segment<Double>> renderable, final Graphics2D graphics,
-        final Surface context) {
-        final Segment<Double> seg = renderable.renderable();
-        final Transform transform = new Transform(context);
-        final Point start = transform.transform(seg.start());
-        final Point end = transform.transform(seg.end());
-        graphics.drawLine(start.x, start.y, end.x, end.y);
+    public void draw(final Shape<Segment<Double>> renderable, final Graphics2D graphics, final Surface context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

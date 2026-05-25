@@ -66,12 +66,11 @@ public final class PerpLine<T> implements Line<T> {
 
     @Override
     public Vect<T> direction() {
-        return new RotateVect<T>(this.perp.direction(), Math.PI / 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> point() {
-        return this.pnt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

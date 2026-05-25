@@ -49,7 +49,7 @@ public final class Painters {
      * @return A list of default painters
      */
     public List<AbstractAwtPaint<?>> defaults() {
-        return new ArrayList<>(this.def);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**

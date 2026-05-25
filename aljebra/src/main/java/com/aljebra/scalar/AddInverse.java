@@ -51,7 +51,6 @@ public final class AddInverse<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        return field.addition().inverse(field.actual(this.inverse));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

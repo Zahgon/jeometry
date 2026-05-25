@@ -53,9 +53,6 @@ public final class Opposite<T> implements Vect<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        return new Times<T>(
-            this.vector, new AddInverse<T>(new MultIdentity<T>())
-        ).coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

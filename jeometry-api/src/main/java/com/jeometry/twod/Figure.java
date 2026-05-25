@@ -53,17 +53,7 @@ public final class Figure implements Iterable<Shape<?>> {
      * @return This figure instance
      */
     public Figure add(final Shape<?> shape) {
-        final Optional<String> name = shape.name();
-        Preconditions.checkArgument(
-            !(name.isPresent() && this.shaps.containsKey(name.get())),
-            "A shape with name [%s] already exists in the figure", name
-        );
-        if (shape.anonymous()) {
-            this.anonymous.add(shape);
-        } else {
-            this.shaps.put(name.get(), shape);
-        }
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,8 +62,7 @@ public final class Figure implements Iterable<Shape<?>> {
      * @return This figure instance
      */
     public Figure add(final Renderable shape) {
-        this.anonymous.add(new Shape<>(shape));
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -83,7 +72,7 @@ public final class Figure implements Iterable<Shape<?>> {
      * @return This figure instance
      */
     public Figure add(final Renderable shape, final String name) {
-        return this.add(new Shape<>(shape, name));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -92,15 +81,11 @@ public final class Figure implements Iterable<Shape<?>> {
      * @return The shape
      */
     public Optional<Shape<?>> shape(final String name) {
-        return Optional.ofNullable(this.shaps.get(name));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Iterator<Shape<?>> iterator() {
-        final List<Shape<?>> all =
-            new ArrayList<>(this.shaps.size() + this.anonymous.size());
-        all.addAll(this.shaps.values());
-        all.addAll(this.anonymous);
-        return all.iterator();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

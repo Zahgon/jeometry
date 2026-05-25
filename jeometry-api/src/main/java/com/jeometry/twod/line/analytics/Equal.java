@@ -58,10 +58,6 @@ public final class Equal<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        return new And<>(
-            new Parallel<>(this.first, this.second),
-            new PointInLine<>(this.first.point(), this.second)
-        ).resolve(field);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

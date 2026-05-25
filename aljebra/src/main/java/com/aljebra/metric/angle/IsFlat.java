@@ -48,9 +48,6 @@ public final class IsFlat<T> implements Predicate<MetricSpaceField<T>> {
 
     @Override
     public boolean resolve(final MetricSpaceField<T> field) {
-        return Double.valueOf(
-            this.angle.resolve(field.product()).doubleValue() % (2 * Math.PI)
-        ).equals(Math.PI);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

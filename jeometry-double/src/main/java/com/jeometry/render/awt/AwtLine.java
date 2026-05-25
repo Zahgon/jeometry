@@ -57,14 +57,8 @@ public final class AwtLine extends AbstractAwtPaint<Line<Double>> {
     }
 
     @Override
-    public void draw(final Shape<Line<Double>> renderable, final Graphics2D graphics,
-        final Surface context) {
-        final Line<Double> line = renderable.renderable();
-        if (new Vertical<>(line).resolve(this.field())) {
-            AwtLine.vertical(graphics, line, context);
-        } else {
-            AwtLine.regular(graphics, line, context);
-        }
+    public void draw(final Shape<Line<Double>> renderable, final Graphics2D graphics, final Surface context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,18 +67,13 @@ public final class AwtLine extends AbstractAwtPaint<Line<Double>> {
      * @param line Line to draw
      * @param context AwtContext
      */
-    private static void regular(final Graphics2D graphics,
-        final Line<Double> line, final Surface context) {
+    private static void regular(final Graphics2D graphics, final Line<Double> line, final Surface context) {
         final int width = context.width();
         final Transform transform = new Transform(context);
         final Scalar<Double> xstart = transform.inverse(new Point(0, 0)).xcoor();
         final Scalar<Double> xend = transform.inverse(new Point(width, 0)).xcoor();
-        final Point start = transform.transform(
-            new InLinePoint<>(line, xstart)
-        );
-        final Point end = transform.transform(
-            new InLinePoint<>(line, xend)
-        );
+        final Point start = transform.transform(new InLinePoint<>(line, xstart));
+        final Point end = transform.transform(new InLinePoint<>(line, xend));
         graphics.drawLine(start.x, start.y, end.x, end.y);
     }
 
@@ -94,10 +83,8 @@ public final class AwtLine extends AbstractAwtPaint<Line<Double>> {
      * @param line Line to draw
      * @param context AwtContext
      */
-    private static void vertical(final Graphics2D graphics, final Line<Double> line,
-        final Surface context) {
+    private static void vertical(final Graphics2D graphics, final Line<Double> line, final Surface context) {
         final Point point = new Transform(context).transform(line.point());
         graphics.drawLine(point.x, 0, point.x, context.height());
     }
-
 }

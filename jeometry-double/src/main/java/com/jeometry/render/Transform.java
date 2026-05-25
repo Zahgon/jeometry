@@ -70,13 +70,7 @@ public final class Transform {
      * @return AWT Point
      */
     public Point transform(final DblPoint point) {
-        final double scale = this.ctx.scale();
-        return new Point(
-            (int) (this.ctx.width() / 2d
-                + scale * point.dblx() - this.ctx.center().dblx() * scale),
-            (int) (this.ctx.height() / 2d
-                - scale * point.dbly() + this.ctx.center().dbly() * scale)
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -85,12 +79,7 @@ public final class Transform {
      * @return AWT Point
      */
     public Point transform(final XyPoint<Double> point) {
-        return this.transform(
-            new DblPoint(
-                this.field.actual(point.xcoor()),
-                this.field.actual(point.ycoor())
-            )
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -99,12 +88,7 @@ public final class Transform {
      * @return AWT Point
      */
     public Point transform(final Vect<Double> point) {
-        return this.transform(
-            new DblPoint(
-                this.field.actual(point.coords()[0]),
-                this.field.actual(point.coords()[1])
-            )
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -113,11 +97,6 @@ public final class Transform {
      * @return AWT Point
      */
     public DblPoint inverse(final Point point) {
-        final double scale = this.ctx.scale();
-        final DblPoint center = this.ctx.center();
-        return new DblPoint(
-            (point.x - this.ctx.width() / 2d) / scale + center.dblx(),
-            (this.ctx.height() / 2d - point.y) / scale + center.dbly()
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

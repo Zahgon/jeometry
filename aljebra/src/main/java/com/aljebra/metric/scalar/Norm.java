@@ -52,7 +52,6 @@ public final class Norm<T> extends MetricScalar<T> {
 
     @Override
     public T value(final MetricSpaceField<T> field) {
-        return field.actual(field.product().norm(this.vector));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

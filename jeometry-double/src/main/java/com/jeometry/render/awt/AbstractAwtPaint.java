@@ -58,32 +58,14 @@ public abstract class AbstractAwtPaint<T extends Renderable> implements Renderer
      * @param field Field for scalar operations
      * @param clazz Supported class
      */
-    public AbstractAwtPaint(final Field<Double> field,
-        final Class<?> clazz) {
+    public AbstractAwtPaint(final Field<Double> field, final Class<?> clazz) {
         this.fld = field;
         this.clazz = clazz;
     }
 
     @Override
-    public final void render(final Shape<?> renderable, final Surface context,
-        final Graphics2D graphics) {
-        new RenderSupport(
-            new Renderer() {
-                @SuppressWarnings("unchecked")
-                @Override
-                public void render(final Shape<?> renderable, final Surface context,
-                    final Graphics2D graphics) {
-                    final Stroke stroke = renderable.style().stroke();
-                    graphics.setStroke(new AwtStroke(stroke));
-                    graphics.setColor(stroke.color());
-                    AbstractAwtPaint.this.draw(
-                        ((Class<Shape<T>>) (Class<?>) Shape.class).cast(renderable), graphics,
-                        context
-                    );
-                }
-            },
-            this.clazz
-        ).render(renderable, context, graphics);
+    public final void render(final Shape<?> renderable, final Surface context, final Graphics2D graphics) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,7 +73,7 @@ public abstract class AbstractAwtPaint<T extends Renderable> implements Renderer
      * @return The field
      */
     protected final Field<Double> field() {
-        return this.fld;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -100,6 +82,5 @@ public abstract class AbstractAwtPaint<T extends Renderable> implements Renderer
      * @param graphic AWT {@link Graphics2D} to draw
      * @param ctx Drawing {@link Surface}
      */
-    protected abstract void draw(Shape<T> renderable, Graphics2D graphic,
-        Surface ctx);
+    protected abstract void draw(Shape<T> renderable, Graphics2D graphic, Surface ctx);
 }

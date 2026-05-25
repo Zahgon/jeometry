@@ -83,16 +83,13 @@ public final class RotateVect<T> extends FixedVector<T> {
      * @param <T> scalar types
      * @return A scalar corresponding to a coordinate of the rotated vector
      */
-    private static <T> Scalar<T> coord(final Vect<T> vector, final Degrees<T> angle,
-        final int dim) {
+    private static <T> Scalar<T> coord(final Vect<T> vector, final Degrees<T> angle, final int dim) {
         return new MetricScalar<T>() {
+
             @Override
             public T value(final MetricSpaceField<T> field) {
-                return field.actual(
-                    field.product().rot(vector, angle).coords()[dim]
-                );
+                throw new UnsupportedOperationException("STUB: not implemented");
             }
         };
     }
-
 }

@@ -49,6 +49,7 @@ public interface Degrees<T> {
     @EqualsAndHashCode
     @ToString(includeFieldNames = false)
     class Default<T> implements Degrees<T> {
+
         /**
          * Wrapped Number.
          */
@@ -64,7 +65,7 @@ public interface Degrees<T> {
 
         @Override
         public Number resolve(final InnerProduct<T> product) {
-            return this.origin;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

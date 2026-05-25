@@ -59,8 +59,7 @@ public final class Surface {
      * @param scale Zoom of drawable surface.
      * @param center Point on which drawable surface is centered
      */
-    public Surface(final Dimension dim, final double scale,
-        final DblPoint center) {
+    public Surface(final Dimension dim, final double scale, final DblPoint center) {
         this.wdth = dim.width;
         this.hght = dim.height;
         this.scle = scale;
@@ -79,7 +78,7 @@ public final class Surface {
      * @return Height of drawable surface
      */
     public int height() {
-        return this.hght;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -87,7 +86,7 @@ public final class Surface {
      * @return Width of drawable surface
      */
     public int width() {
-        return this.wdth;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -95,7 +94,7 @@ public final class Surface {
      * @return Scale of drawable surface
      */
     public double scale() {
-        return this.scle;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,7 +102,6 @@ public final class Surface {
      * @return Scale of drawable surface
      */
     public DblPoint center() {
-        return this.cntr;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

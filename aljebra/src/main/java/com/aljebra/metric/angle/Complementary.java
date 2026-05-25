@@ -52,7 +52,6 @@ public final class Complementary<T> implements Degrees<T> {
 
     @Override
     public Number resolve(final InnerProduct<T> product) {
-        return Math.PI / 2 - this.angle.resolve(product).doubleValue();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

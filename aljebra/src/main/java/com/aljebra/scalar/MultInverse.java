@@ -51,15 +51,6 @@ public final class MultInverse<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        if (field.equals(this.inverse, new AddIdentity<T>())) {
-            throw new IllegalArgumentException(
-                String.format(
-                    "Impossible to inverse addition neutral element: %s",
-                    this.inverse
-                )
-            );
-        }
-        return field.multiplication().inverse(field.actual(this.inverse));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -57,8 +57,7 @@ public final class MeasureAngle<T> implements Angle<T> {
      * @param start Starting angle vector
      * @param measure Angle measure
      */
-    public MeasureAngle(final Vect<T> origin, final Vect<T> start,
-        final Number measure) {
+    public MeasureAngle(final Vect<T> origin, final Vect<T> start, final Number measure) {
         this.org = origin;
         this.frst = start;
         this.scnd = new RotateVect<T>(start, measure);
@@ -74,16 +73,16 @@ public final class MeasureAngle<T> implements Angle<T> {
 
     @Override
     public Vect<T> origin() {
-        return this.org;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> start() {
-        return this.frst;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> end() {
-        return this.scnd;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

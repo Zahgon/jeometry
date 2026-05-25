@@ -54,7 +54,7 @@ public final class LineAnalytics<T> {
      * @return A scalar representing the line slope
      */
     public Scalar<T> slope() {
-        return new Slope<T>(this.line);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -62,7 +62,7 @@ public final class LineAnalytics<T> {
      * @return A scalar representing the line y-intercept
      */
     public Scalar<T> intercept() {
-        return new Intercept<T>(this.line);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -70,7 +70,7 @@ public final class LineAnalytics<T> {
      * @return A predicate for the line verticality
      */
     public Predicate<Field<T>> vertical() {
-        return new Vertical<>(this.line);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -79,6 +79,6 @@ public final class LineAnalytics<T> {
      * @return A scalar representing the ordinate
      */
     public Scalar<T> ordinate(final Scalar<T> abcissa) {
-        return new LinePointOrdinate<>(this.line, abcissa);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

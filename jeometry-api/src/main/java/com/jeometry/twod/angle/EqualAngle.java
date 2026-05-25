@@ -61,9 +61,7 @@ public final class EqualAngle<T> implements Angle<T> {
     public EqualAngle(final Vect<T> origin, final Vect<T> start, final Angle<T> angle) {
         this.org = origin;
         this.frst = start;
-        this.scnd = new RotateVect<T>(
-            start, new VectsDegrees<>(angle.start(), angle.end())
-        );
+        this.scnd = new RotateVect<T>(start, new VectsDegrees<>(angle.start(), angle.end()));
     }
 
     /**
@@ -76,17 +74,16 @@ public final class EqualAngle<T> implements Angle<T> {
 
     @Override
     public Vect<T> origin() {
-        return this.org;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> start() {
-        return this.frst;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> end() {
-        return this.scnd;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

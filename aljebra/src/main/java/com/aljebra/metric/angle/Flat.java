@@ -36,7 +36,6 @@ public final class Flat<T> implements Degrees<T> {
 
     @Override
     public Number resolve(final InnerProduct<T> product) {
-        return Math.PI;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

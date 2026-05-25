@@ -56,11 +56,11 @@ public class PtDirRay<T> implements Ray<T> {
 
     @Override
     public final Vect<T> direction() {
-        return this.dir;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Vect<T> origin() {
-        return this.org;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

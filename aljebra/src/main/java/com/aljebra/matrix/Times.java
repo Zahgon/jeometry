@@ -61,39 +61,31 @@ public final class Times<T> implements Matrix<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        return new com.aljebra.vector.Times<T>(
-            new FixedVector<T>(Arrays.asList(this.matrix.coords())), this.scalar
-        ).coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] column(final int index) {
-        return new com.aljebra.vector.Times<T>(
-            new FixedVector<T>(Arrays.asList(this.matrix.column(index))), this.scalar
-        ).coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] line(final int index) {
-        return new com.aljebra.vector.Times<T>(
-            new FixedVector<T>(Arrays.asList(this.matrix.line(index))), this.scalar
-        ).coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> apply(final Vect<T> input) {
-        return new com.aljebra.vector.Times<T>(
-            this.matrix.apply(input), this.scalar
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int columns() {
-        return this.matrix.columns();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int lines() {
-        return this.matrix.lines();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -81,15 +81,6 @@ public final class Parallel<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        final Vertical<T> fvertical = new Vertical<>(this.first);
-        final Vertical<T> svertical = new Vertical<>(this.second);
-        final boolean both = new And<>(fvertical, svertical).resolve(field);
-        final boolean none = new And<>(
-            new Not<>(fvertical), new Not<>(svertical)
-        ).resolve(field);
-        return both || none && new Equals<>(
-            new Slope<>(this.first), new Slope<>(this.second)
-        ).resolve(field);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

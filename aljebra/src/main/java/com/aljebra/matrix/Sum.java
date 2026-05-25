@@ -69,48 +69,32 @@ public final class Sum<T> implements Matrix<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        final List<Vect<T>> results = new ArrayList<>(this.operands.size());
-        for (final Matrix<T> oper : this.operands) {
-            results.add(Sum.vector(Arrays.asList(oper.coords())));
-        }
-        return new com.aljebra.vector.Sum<T>(results).coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] column(final int index) {
-        final List<Vect<T>> cols = new ArrayList<>(this.operands.size());
-        for (final Matrix<T> oper : this.operands) {
-            cols.add(Sum.vector(Arrays.asList(oper.column(index))));
-        }
-        return new com.aljebra.vector.Sum<T>(cols).coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] line(final int index) {
-        final List<Vect<T>> lines = new ArrayList<>(this.operands.size());
-        for (final Matrix<T> oper : this.operands) {
-            lines.add(Sum.vector(Arrays.asList(oper.line(index))));
-        }
-        return new com.aljebra.vector.Sum<T>(lines).coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> apply(final Vect<T> input) {
-        final List<Vect<T>> results = new ArrayList<>(this.operands.size());
-        for (final Matrix<T> oper : this.operands) {
-            results.add(oper.apply(input));
-        }
-        return new com.aljebra.vector.Sum<T>(results);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int columns() {
-        return this.operands.iterator().next().columns();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int lines() {
-        return this.operands.iterator().next().lines();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**

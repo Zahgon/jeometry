@@ -63,8 +63,7 @@ public class RadAngleArc<T> implements Arc<T> {
      * @param start Arc starting angle
      * @param end Arc ending angle
      */
-    public RadAngleArc(final Circle<T> circle, final Number start,
-        final Number end) {
+    public RadAngleArc(final Circle<T> circle, final Number start, final Number end) {
         this.rdx = circle.radius();
         this.cntr = circle.center();
         this.starting = start;
@@ -73,22 +72,21 @@ public class RadAngleArc<T> implements Arc<T> {
 
     @Override
     public final Vect<T> center() {
-        return this.cntr;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Scalar<T> radius() {
-        return this.rdx;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Number start() {
-        return this.starting;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Number end() {
-        return this.ending;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

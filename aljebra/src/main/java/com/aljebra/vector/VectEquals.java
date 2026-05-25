@@ -57,10 +57,7 @@ public final class VectEquals<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        final Scalar<T>[] fcoords = this.first.coords();
-        final Scalar<T>[] scoords = this.second.coords();
-        return fcoords.length == scoords.length
-            && VectEquals.arraysEqual(fcoords, scoords, field);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -71,8 +68,7 @@ public final class VectEquals<T> implements Predicate<Field<T>> {
      * @param <T> scalar types
      * @return True if the two arrays are equals
      */
-    private static <T> boolean arraysEqual(final Scalar<T>[] first,
-        final Scalar<T>[] second, final Field<T> field) {
+    private static <T> boolean arraysEqual(final Scalar<T>[] first, final Scalar<T>[] second, final Field<T> field) {
         boolean result = true;
         for (int idx = 0; idx < second.length; ++idx) {
             if (!VectEquals.scalarEqual(first[idx], second[idx], field)) {
@@ -91,9 +87,7 @@ public final class VectEquals<T> implements Predicate<Field<T>> {
      * @param <T> scalar types
      * @return True if the two scalars are equals
      */
-    private static <T> boolean scalarEqual(final Scalar<T> first, final Scalar<T> second,
-        final Field<T> field) {
+    private static <T> boolean scalarEqual(final Scalar<T> first, final Scalar<T> second, final Field<T> field) {
         return new Equals<>(first, second).resolve(field);
     }
-
 }

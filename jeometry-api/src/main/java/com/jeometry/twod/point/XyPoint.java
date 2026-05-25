@@ -60,7 +60,7 @@ public class XyPoint<T> extends FixedVector<T> implements Renderable {
      * @return X coordinate of the point
      */
     public final Scalar<T> xcoor() {
-        return this.coords()[0];
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -68,7 +68,6 @@ public class XyPoint<T> extends FixedVector<T> implements Renderable {
      * @return Y coordinate of the point
      */
     public final Scalar<T> ycoor() {
-        return this.coords()[1];
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

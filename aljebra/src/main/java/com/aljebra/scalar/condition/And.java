@@ -59,14 +59,6 @@ public final class And<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        boolean result = true;
-        for (final Predicate<Field<T>> predicate : this.opers) {
-            if (!predicate.resolve(field)) {
-                result = false;
-                break;
-            }
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

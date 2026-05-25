@@ -59,17 +59,6 @@ public final class PointInLine<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        final Scalar<T> xcoor = this.point.coords()[0];
-        final Predicate<Field<T>> result;
-        if (new Vertical<>(this.line).resolve(field)) {
-            result = new Equals<>(xcoor, this.line.point().coords()[0]);
-        } else {
-            result = new Equals<>(
-                this.point.coords()[1],
-                new LinePointOrdinate<T>(this.line, xcoor)
-            );
-        }
-        return result.resolve(field);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

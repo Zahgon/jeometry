@@ -60,7 +60,6 @@ public final class Product<T> extends MetricScalar<T> {
 
     @Override
     public T value(final MetricSpaceField<T> field) {
-        return field.actual(field.product().product(this.first, this.second));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -44,56 +44,22 @@ public final class Dot implements InnerProduct<Double> {
 
     @Override
     public Scalar<Double> product(final Vect<Double> foperand, final Vect<Double> soperand) {
-        final Scalar<Double>[] first = foperand.coords();
-        final Scalar<Double>[] second = soperand.coords();
-        final List<Multiplication<Double>> multis = new ArrayList<>(first.length);
-        for (int idx = 0; idx < first.length; ++idx) {
-            multis.add(Dot.mult(first[idx], second[idx]));
-        }
-        return new Add<Double>(multis);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<Double> norm(final Vect<Double> vect) {
-        return Dot.wrap(Math.sqrt(Dot.val(this.product(vect, vect))));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Degrees<Double> angle(final Vect<Double> first, final Vect<Double> second) {
-        final Double cross =
-            Dot.val(first.coords()[0]) * Dot.val(second.coords()[1])
-                - Dot.val(second.coords()[0]) * Dot.val(first.coords()[1]);
-        final Double norms = Dot.val(
-            new Multiplication<Double>(this.norm(first), this.norm(second))
-        );
-        final Double result;
-        if (norms == 0) {
-            result = 0.;
-        } else {
-            final Double arcsin = Math.asin(cross / norms);
-            final Double arcos = Math.acos(
-                Dot.val(this.product(first, second)) / norms
-            );
-            if (arcsin >= 0) {
-                result = arcos;
-            } else {
-                result = -arcos;
-            }
-        }
-        return new Degrees.Default<>(result);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<Double> rot(final Vect<Double> vect, final Degrees<Double> ang) {
-        final Double angle = ang.resolve(this).doubleValue();
-        final Matrix<Double> rot = new DblMatrix(
-            2, 2,
-            Math.cos(angle),
-            Math.sin(angle),
-            -Math.sin(angle),
-            Math.cos(angle)
-        );
-        return rot.apply(vect);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,8 +68,7 @@ public final class Dot implements InnerProduct<Double> {
      * @param sec Second operand
      * @return A scalar representing scalar multiplication
      */
-    private static Multiplication<Double> mult(final Scalar<Double> first,
-        final Scalar<Double> sec) {
+    private static Multiplication<Double> mult(final Scalar<Double> first, final Scalar<Double> sec) {
         return new Multiplication<Double>(first, sec);
     }
 

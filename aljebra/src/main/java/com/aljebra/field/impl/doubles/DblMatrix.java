@@ -53,32 +53,32 @@ public final class DblMatrix implements Matrix<Double> {
 
     @Override
     public Scalar<Double>[] coords() {
-        return this.actual.coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<Double>[] column(final int index) {
-        return this.actual.column(index);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<Double>[] line(final int index) {
-        return this.actual.line(index);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<Double> apply(final Vect<Double> input) {
-        return this.actual.apply(input);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int columns() {
-        return this.actual.columns();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int lines() {
-        return this.actual.lines();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -102,5 +102,4 @@ public final class DblMatrix implements Matrix<Double> {
     private static Scalar<Double> wrap(final Double num) {
         return new Scalar.Default<Double>(num);
     }
-
 }

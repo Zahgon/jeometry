@@ -47,7 +47,7 @@ public final class DblPoint extends XyPoint<Double> {
      * @return X coordinate double value
      */
     public Double dblx() {
-        return DblPoint.value(this.xcoor());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -55,7 +55,7 @@ public final class DblPoint extends XyPoint<Double> {
      * @return Y coordinate double value
      */
     public Double dbly() {
-        return DblPoint.value(this.ycoor());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**

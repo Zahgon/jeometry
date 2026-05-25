@@ -34,7 +34,6 @@ public final class False<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        return false;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -56,7 +56,6 @@ public final class Intersecting<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        return !new Parallel<>(this.first, this.second).resolve(field);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

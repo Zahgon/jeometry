@@ -56,12 +56,11 @@ public class PtsSegment<T> implements Segment<T> {
 
     @Override
     public final Vect<T> start() {
-        return this.first;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Vect<T> end() {
-        return this.second;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

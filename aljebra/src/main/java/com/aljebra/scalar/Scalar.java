@@ -49,6 +49,7 @@ public interface Scalar<T> {
     @EqualsAndHashCode
     @ToString(includeFieldNames = false)
     class Default<R> implements Scalar<R> {
+
         /**
          * Wrapped object.
          */
@@ -64,7 +65,7 @@ public interface Scalar<T> {
 
         @Override
         public R value(final Field<R> field) {
-            return this.origin;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

@@ -36,6 +36,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 @ToString
 public final class Division<T> implements Scalar<T> {
+
     /**
      * First operand.
      */
@@ -61,7 +62,7 @@ public final class Division<T> implements Scalar<T> {
      * @return The first operand of the division.
      */
     public Scalar<T> first() {
-        return this.dividend;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,14 +70,11 @@ public final class Division<T> implements Scalar<T> {
      * @return The second operand of the sum.
      */
     public Scalar<T> second() {
-        return this.divisor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public T value(final Field<T> field) {
-        final FieldMultiplication<T> mult = field.multiplication();
-        final T inverse = mult.inverse(field.actual(this.divisor));
-        return mult.multiply(field.actual(this.dividend), inverse);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

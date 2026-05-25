@@ -48,9 +48,6 @@ public final class IsRight<T> implements Predicate<MetricSpaceField<T>> {
 
     @Override
     public boolean resolve(final MetricSpaceField<T> field) {
-        return Double.valueOf(
-            this.angle.resolve(field.product()).doubleValue() % Math.PI
-        ).equals(Math.PI / 2);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

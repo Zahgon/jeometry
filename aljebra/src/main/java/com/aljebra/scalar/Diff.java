@@ -36,6 +36,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 @ToString
 public final class Diff<T> implements Scalar<T> {
+
     /**
      * First operand.
      */
@@ -61,7 +62,7 @@ public final class Diff<T> implements Scalar<T> {
      * @return The first operand of the difference.
      */
     public Scalar<T> first() {
-        return this.foperand;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -69,14 +70,11 @@ public final class Diff<T> implements Scalar<T> {
      * @return The second operand of the difference.
      */
     public Scalar<T> second() {
-        return this.soperand;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public T value(final Field<T> field) {
-        final FieldAddition<T> add = field.addition();
-        final T inverse = add.inverse(field.actual(this.soperand));
-        return add.add(field.actual(this.foperand), inverse);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

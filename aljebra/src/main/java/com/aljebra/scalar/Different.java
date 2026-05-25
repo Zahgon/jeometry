@@ -56,10 +56,6 @@ public final class Different<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        if (!this.generated.isPresent()) {
-            this.generated = Optional.of(field.other(this.scl));
-        }
-        return field.actual(this.generated.get());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

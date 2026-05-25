@@ -47,7 +47,6 @@ public final class Not<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        return !this.origin.resolve(field);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

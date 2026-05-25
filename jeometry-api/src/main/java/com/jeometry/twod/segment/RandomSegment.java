@@ -56,12 +56,11 @@ public final class RandomSegment<T> implements Segment<T> {
 
     @Override
     public Vect<T> start() {
-        return this.first;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> end() {
-        return this.second;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

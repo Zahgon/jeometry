@@ -51,12 +51,11 @@ public final class SgtLine<T> implements Line<T> {
 
     @Override
     public Vect<T> direction() {
-        return new Minus<T>(this.segment.start(), this.segment.end());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> point() {
-        return this.segment.start();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

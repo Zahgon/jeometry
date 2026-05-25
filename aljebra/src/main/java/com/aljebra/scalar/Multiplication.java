@@ -67,17 +67,11 @@ public final class Multiplication<T> implements Scalar<T> {
      * @return Operands of the multiplication.
      */
     public Iterable<Scalar<T>> operands() {
-        return this.opers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public T value(final Field<T> field) {
-        final FieldMultiplication<T> mult = field.multiplication();
-        T result = mult.neutral();
-        for (final Scalar<T> operand : this.operands()) {
-            result = mult.multiply(result, operand.value(field));
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

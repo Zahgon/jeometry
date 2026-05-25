@@ -53,18 +53,7 @@ public final class AwtAngle extends AbstractAwtPaint<Angle<Double>> {
     }
 
     @Override
-    public void draw(final Shape<Angle<Double>> renderable, final Graphics2D graphics,
-        final Surface context) {
-        final Angle<Double> angle = renderable.renderable();
-        final AwtRay drawer = new AwtRay(this.field());
-        drawer.draw(
-            new Shape<>(new PtDirRay<>(angle.origin(), angle.start())),
-            graphics, context
-        );
-        drawer.draw(
-            new Shape<>(new PtDirRay<>(angle.origin(), angle.end())),
-            graphics, context
-        );
+    public void draw(final Shape<Angle<Double>> renderable, final Graphics2D graphics, final Surface context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -48,7 +48,6 @@ public final class Acute<T> implements Degrees<T> {
 
     @Override
     public Number resolve(final InnerProduct<T> product) {
-        return this.random * Math.PI / 2;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

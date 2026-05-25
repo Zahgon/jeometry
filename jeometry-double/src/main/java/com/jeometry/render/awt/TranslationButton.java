@@ -52,8 +52,7 @@ public final class TranslationButton extends JButton {
      * @param xtrans X translation Amount to trigger
      * @param ytrans Y translation Amount to trigger
      */
-    public TranslationButton(final String caption, final double xtrans,
-        final double ytrans) {
+    public TranslationButton(final String caption, final double xtrans, final double ytrans) {
         super(caption);
         this.xtrans = xtrans;
         this.ytrans = ytrans;
@@ -65,8 +64,6 @@ public final class TranslationButton extends JButton {
      * @return This button
      */
     public JButton react(final AwtDrawableSurface drawable) {
-        this.addMouseListener(new Translate(this.xtrans, this.ytrans, drawable));
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

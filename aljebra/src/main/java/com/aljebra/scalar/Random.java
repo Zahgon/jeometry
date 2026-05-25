@@ -49,10 +49,6 @@ public final class Random<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        if (!this.generated.isPresent()) {
-            this.generated = Optional.of(field.random());
-        }
-        return field.actual(this.generated.get());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

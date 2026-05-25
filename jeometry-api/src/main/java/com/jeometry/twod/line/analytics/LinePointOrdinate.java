@@ -64,29 +64,6 @@ public final class LinePointOrdinate<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        final boolean inline = field.equals(
-            this.line.point().coords()[0], this.abscissa
-        );
-        final boolean vertical = new Vertical<>(this.line).resolve(field);
-        if (vertical && !inline) {
-            throw new IllegalStateException(
-                "Vertical line could not pass by a point with this abscissa"
-            );
-        }
-        final T result;
-        if (vertical && inline) {
-            result = field.actual(new Random<T>());
-        } else {
-            result = field.actual(
-                new Add<>(
-                    new Multiplication<T>(
-                        new Slope<T>(this.line), this.abscissa
-                    ),
-                    new Intercept<T>(this.line)
-                )
-            );
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

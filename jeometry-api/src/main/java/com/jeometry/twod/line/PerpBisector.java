@@ -51,12 +51,11 @@ public final class PerpBisector<T> implements Line<T> {
 
     @Override
     public Vect<T> direction() {
-        return new PerpLine<>(new SgtLine<>(this.seg)).direction();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> point() {
-        return new MidSegPoint<>(this.seg);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

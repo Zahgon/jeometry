@@ -55,12 +55,11 @@ public class FixedStyle implements Style {
 
     @Override
     public final Stroke stroke() {
-        return this.strk;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Fill fill() {
-        return this.fll;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

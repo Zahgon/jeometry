@@ -76,12 +76,7 @@ public final class Awt extends JFrame implements Output {
 
     @Override
     public void render(final Figure fig) {
-        if (!this.initiated) {
-            this.init();
-        }
-        this.drawable.setFigure(fig);
-        this.repaint();
-        this.setVisible(true);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -91,8 +86,7 @@ public final class Awt extends JFrame implements Output {
      * @return This awt reference
      */
     public Awt withSize(final int width, final int height) {
-        this.drawable.withSize(width, height);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -101,8 +95,7 @@ public final class Awt extends JFrame implements Output {
      * @return This awt reference
      */
     public Awt add(final AbstractAwtPaint<?> painter) {
-        this.drawable.add(painter);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -116,12 +109,7 @@ public final class Awt extends JFrame implements Output {
         final int height = 300;
         this.setBounds(posx, posy, width, height);
         final JPanel content = new JPanel();
-        content.setBorder(
-            new EmptyBorder(
-                Awt.BORDER_INSET, Awt.BORDER_INSET,
-                Awt.BORDER_INSET, Awt.BORDER_INSET
-            )
-        );
+        content.setBorder(new EmptyBorder(Awt.BORDER_INSET, Awt.BORDER_INSET, Awt.BORDER_INSET, Awt.BORDER_INSET));
         this.setContentPane(content);
         content.setLayout(new BorderLayout(0, 0));
         this.drawable.mouseReact();
@@ -129,5 +117,4 @@ public final class Awt extends JFrame implements Output {
         content.add(new Buttons(this.drawable).init(), BorderLayout.EAST);
         this.initiated = true;
     }
-
 }

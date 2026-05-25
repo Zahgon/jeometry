@@ -63,11 +63,6 @@ public final class Sum<T> implements Degrees<T> {
 
     @Override
     public Number resolve(final InnerProduct<T> product) {
-        Double sum = 0.;
-        for (final Degrees<T> angle : this.operands) {
-            sum += angle.resolve(product).doubleValue();
-        }
-        return sum;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

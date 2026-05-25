@@ -91,19 +91,16 @@ public final class LengthSegment<T> implements Segment<T> {
      * @param length Segment length
      */
     public LengthSegment(final Vect<T> strt, final Vect<T> dir, final Scalar<T> length) {
-        this.seg = new PtVectSegment<>(
-            strt, new Times<>(new Normalized<>(dir), length)
-        );
+        this.seg = new PtVectSegment<>(strt, new Times<>(new Normalized<>(dir), length));
     }
 
     @Override
     public Vect<T> start() {
-        return this.seg.start();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> end() {
-        return this.seg.end();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

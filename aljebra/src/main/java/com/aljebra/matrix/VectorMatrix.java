@@ -60,31 +60,31 @@ public final class VectorMatrix<T> implements Matrix<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        return this.actual.coords();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] column(final int index) {
-        return this.actual.column(index);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] line(final int index) {
-        return this.actual.line(index);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> apply(final Vect<T> input) {
-        return this.actual.apply(input);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int columns() {
-        return this.actual.columns();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int lines() {
-        return this.actual.lines();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

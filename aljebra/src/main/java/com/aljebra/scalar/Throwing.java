@@ -49,7 +49,6 @@ public final class Throwing<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        throw this.exception;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

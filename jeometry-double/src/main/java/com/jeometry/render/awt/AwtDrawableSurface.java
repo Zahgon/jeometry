@@ -91,35 +91,12 @@ public final class AwtDrawableSurface extends JPanel {
      * Inits listeners on the drawable surface.
      */
     public void mouseReact() {
-        final MouseAdapter listener = new MouseZoomTranslate(this);
-        this.addMouseMotionListener(listener);
-        this.addMouseListener(listener);
-        this.addMouseWheelListener(listener);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void paint(final Graphics graphics) {
-        super.paint(graphics);
-        final int width = this.getWidth();
-        final int height = this.getHeight();
-        graphics.clearRect(0, 0, width, height);
-        graphics.setColor(Color.WHITE);
-        graphics.fillRect(0, 0, width, height);
-        if (graphics instanceof Graphics2D) {
-            final Graphics2D surface = (Graphics2D) graphics;
-            surface.setRenderingHint(
-                RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON
-            );
-            final Surface context = this.context();
-            surface.setColor(Color.BLACK);
-            for (final AbstractAwtPaint<?> painter : this.painters) {
-                for (final Shape<?> shape : this.figure) {
-                    painter.render(shape, context, surface);
-                }
-            }
-            this.axis(surface);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -127,24 +104,21 @@ public final class AwtDrawableSurface extends JPanel {
      * @return Drawing {@link Surface}
      */
     public Surface context() {
-        return new Surface(
-            new Dimension(this.getWidth(), this.getHeight()),
-            this.scale, this.center
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Zooms in the drawable surface.
      */
     public void zoomIn() {
-        this.scale *= AwtDrawableSurface.ZOOM_AMOUNT;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
      * Zooms out the drawable surface.
      */
     public void zoomOut() {
-        this.scale /= AwtDrawableSurface.ZOOM_AMOUNT;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -154,9 +128,7 @@ public final class AwtDrawableSurface extends JPanel {
      * @param amounty Amount to translate by on Y-Axis
      */
     public void translate(final double amountx, final double amounty) {
-        this.center = new DblPoint(
-            this.center.dblx() + amountx, this.center.dbly() + amounty
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -166,8 +138,7 @@ public final class AwtDrawableSurface extends JPanel {
      * @return This drawable surface
      */
     public AwtDrawableSurface withSize(final int width, final int height) {
-        this.setSize((int) this.scale * width, (int) this.scale * height);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -175,7 +146,7 @@ public final class AwtDrawableSurface extends JPanel {
      * @param painter Painter to add
      */
     public void add(final AbstractAwtPaint<?> painter) {
-        this.painters.add(painter);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -183,7 +154,7 @@ public final class AwtDrawableSurface extends JPanel {
      * @param fig The figure to draw
      */
     public void setFigure(final Figure fig) {
-        this.figure = fig;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -193,5 +164,4 @@ public final class AwtDrawableSurface extends JPanel {
     private void axis(final Graphics2D graphics) {
         new AxisPaint(this.context()).paint(graphics);
     }
-
 }

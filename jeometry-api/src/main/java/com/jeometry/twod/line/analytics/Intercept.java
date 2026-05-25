@@ -75,16 +75,6 @@ public final class Intercept<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        if (!new Vertical<>(this.line).resolve(field)) {
-            final Scalar<T>[] coords = this.line.point().coords();
-            final Scalar<T> slope = new Slope<>(this.line);
-            return field.actual(
-                new Diff<T>(coords[1], new Multiplication<>(slope, coords[0]))
-            );
-        }
-        throw new IllegalStateException(
-            "Line has infinite slope. Could not calculate y-intercept."
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

@@ -67,13 +67,6 @@ public final class Ternary<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        final T result;
-        if (this.pred.resolve(field)) {
-            result = field.actual(this.right);
-        } else {
-            result = field.actual(this.wrong);
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

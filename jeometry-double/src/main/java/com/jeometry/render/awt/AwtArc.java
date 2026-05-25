@@ -54,17 +54,8 @@ public final class AwtArc extends AbstractAwtPaint<Arc<Double>> {
     }
 
     @Override
-    public void draw(final Shape<Arc<Double>> renderable, final Graphics2D graphics,
-        final Surface context) {
-        final Arc<Double> arc = renderable.renderable();
-        final int size = (int) (context.scale() * this.field().actual(
-            arc.radius()
-        ));
-        final Point center = new Transform(context)
-            .transform(arc.center());
-        final int start = AwtArc.degrees(arc.start());
-        final int end = AwtArc.degrees(arc.end());
-        graphics.drawArc(center.x - size, center.y - size, 2 * size, 2 * size, start, start - end);
+    public void draw(final Shape<Arc<Double>> renderable, final Graphics2D graphics, final Surface context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -76,5 +67,4 @@ public final class AwtArc extends AbstractAwtPaint<Arc<Double>> {
         final Double degs = Double.valueOf(Math.toDegrees(radians.doubleValue()));
         return degs.intValue();
     }
-
 }

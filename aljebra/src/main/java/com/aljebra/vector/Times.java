@@ -60,12 +60,7 @@ public final class Times<T> implements Vect<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        final Scalar<T>[] coors = this.vector.coords();
-        final Scalar<T>[] result = Arrays.copyOf(coors, coors.length);
-        for (int idx = 0; idx < coors.length; ++idx) {
-            result[idx] = this.mult(coors[idx]);
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**

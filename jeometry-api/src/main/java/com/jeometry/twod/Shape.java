@@ -57,8 +57,7 @@ public final class Shape<T extends Renderable> {
      * @param symbol Renderable name (or empty optional)
      * @param style Renderable style
      */
-    public Shape(final T rndrable, final Optional<String> symbol,
-        final Style style) {
+    public Shape(final T rndrable, final Optional<String> symbol, final Style style) {
         this.rndrable = rndrable;
         this.symbol = symbol;
         this.options = style;
@@ -95,7 +94,7 @@ public final class Shape<T extends Renderable> {
      * @return The renderbale
      */
     public T renderable() {
-        return this.rndrable;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -103,7 +102,7 @@ public final class Shape<T extends Renderable> {
      * @return The renderable name
      */
     public Optional<String> name() {
-        return this.symbol;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -111,7 +110,7 @@ public final class Shape<T extends Renderable> {
      * @return True if the renderable is anonymous
      */
     public boolean anonymous() {
-        return !this.symbol.isPresent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -119,6 +118,6 @@ public final class Shape<T extends Renderable> {
      * @return The renderable style.
      */
     public Style style() {
-        return this.options;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

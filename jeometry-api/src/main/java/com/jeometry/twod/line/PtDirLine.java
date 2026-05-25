@@ -56,12 +56,11 @@ public class PtDirLine<T> implements Line<T> {
 
     @Override
     public final Vect<T> direction() {
-        return this.dir;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Vect<T> point() {
-        return this.pnt;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

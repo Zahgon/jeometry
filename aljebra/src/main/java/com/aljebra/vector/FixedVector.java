@@ -71,7 +71,6 @@ public class FixedVector<T> implements Vect<T> {
 
     @Override
     public final Scalar<T>[] coords() {
-        return Arrays.copyOf(this.coors, this.coors.length);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

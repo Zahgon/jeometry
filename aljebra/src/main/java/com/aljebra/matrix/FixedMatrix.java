@@ -66,8 +66,7 @@ public final class FixedMatrix<T> implements Matrix<T> {
      * @param coor Matrix coordinates to be given in a column by column order
      */
     @SuppressWarnings("unchecked")
-    public FixedMatrix(final int lines, final int columns,
-        final Iterable<? extends Scalar<T>> coor) {
+    public FixedMatrix(final int lines, final int columns, final Iterable<? extends Scalar<T>> coor) {
         this.source = columns;
         this.target = lines;
         this.coors = this.valid(Lists.newArrayList(coor)).toArray(new Scalar[1]);
@@ -75,50 +74,32 @@ public final class FixedMatrix<T> implements Matrix<T> {
 
     @Override
     public Scalar<T>[] coords() {
-        return Arrays.copyOf(this.coors, this.coors.length);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] column(final int index) {
-        final int first = this.index(1, index);
-        return Arrays.copyOfRange(this.coors, first, first + this.target);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Scalar<T>[] line(final int index) {
-        final int first = this.index(index, 1);
-        final Scalar<T>[] result = Arrays.copyOf(this.coors, this.source);
-        for (int idx = 0; idx < this.source; ++idx) {
-            result[idx] = this.coors[first + idx * this.target];
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Vect<T> apply(final Vect<T> input) {
-        if (input.coords().length != this.source) {
-            throw new IllegalArgumentException(
-                String.format(
-                    "Incompatible vector dimension %s with matrix dimension %s",
-                    input.coords().length, this.source
-                )
-            );
-        }
-        final List<Scalar<T>> result = new ArrayList<>(this.target);
-        for (int idx = 0; idx < this.target; ++idx) {
-            result.add(this.product(input, idx + 1));
-        }
-        return new FixedVector<T>(result);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int columns() {
-        return this.source;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int lines() {
-        return this.target;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -150,12 +131,7 @@ public final class FixedMatrix<T> implements Matrix<T> {
      */
     private List<? extends Scalar<T>> valid(final List<? extends Scalar<T>> coor) {
         final int expected = this.source * this.target;
-        Preconditions.checkArgument(
-            expected == coor.size(),
-            "Expected %d scalars for a matrix with %d lines and %d columns",
-            expected, this.source, this.target
-        );
+        Preconditions.checkArgument(expected == coor.size(), "Expected %d scalars for a matrix with %d lines and %d columns", expected, this.source, this.target);
         return coor;
     }
-
 }

@@ -39,7 +39,6 @@ public final class TransparentFill implements Fill {
 
     @Override
     public Color color() {
-        return TransparentFill.TRANSPARENT;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

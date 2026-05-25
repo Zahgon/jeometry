@@ -55,7 +55,6 @@ public final class SegmentLength<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        return new Norm<T>(new SegVect<>(this.seg)).value(field);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

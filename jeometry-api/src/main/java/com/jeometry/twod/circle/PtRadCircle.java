@@ -57,12 +57,11 @@ public class PtRadCircle<T> implements Circle<T> {
 
     @Override
     public final Vect<T> center() {
-        return this.cntr;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Scalar<T> radius() {
-        return this.rdx;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

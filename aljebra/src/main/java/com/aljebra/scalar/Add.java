@@ -67,17 +67,11 @@ public final class Add<T> implements Scalar<T> {
      * @return Operands of the sum.
      */
     public Iterable<Scalar<T>> operands() {
-        return this.opers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public T value(final Field<T> field) {
-        final FieldAddition<T> addition = field.addition();
-        T result = addition.neutral();
-        for (final Scalar<T> operand : this.operands()) {
-            result = addition.add(result, operand.value(field));
-        }
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

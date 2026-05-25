@@ -64,16 +64,16 @@ public class VectsAngle<T> implements Angle<T> {
 
     @Override
     public final Vect<T> origin() {
-        return this.org;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Vect<T> start() {
-        return this.frst;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public final Vect<T> end() {
-        return this.scnd;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

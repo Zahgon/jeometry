@@ -54,8 +54,7 @@ public final class Translate extends MouseAdapter {
      * @param ytrans Y axis translation
      * @param drawable Drawable surface
      */
-    Translate(final double xtrans, final double ytrans,
-        final AwtDrawableSurface drawable) {
+    Translate(final double xtrans, final double ytrans, final AwtDrawableSurface drawable) {
         super();
         this.xtrans = xtrans;
         this.ytrans = ytrans;
@@ -64,7 +63,6 @@ public final class Translate extends MouseAdapter {
 
     @Override
     public void mouseClicked(final MouseEvent event) {
-        this.drawable.translate(this.xtrans, this.ytrans);
-        this.drawable.repaint();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

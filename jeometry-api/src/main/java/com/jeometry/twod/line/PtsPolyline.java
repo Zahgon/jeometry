@@ -51,7 +51,6 @@ public class PtsPolyline<T> implements Polyline<T> {
 
     @Override
     public final List<Vect<T>> points() {
-        return this.pts;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

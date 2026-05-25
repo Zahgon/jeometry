@@ -57,14 +57,8 @@ public final class AwtRay extends AbstractAwtPaint<Ray<Double>> {
     }
 
     @Override
-    public void draw(final Shape<Ray<Double>> renderable, final Graphics2D graphics,
-        final Surface context) {
-        final Ray<Double> ray = renderable.renderable();
-        if (new Vertical<>(ray).resolve(this.field())) {
-            this.vertical(graphics, ray, context);
-        } else {
-            this.regular(graphics, context, ray);
-        }
+    public void draw(final Shape<Ray<Double>> renderable, final Graphics2D graphics, final Surface context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -73,8 +67,7 @@ public final class AwtRay extends AbstractAwtPaint<Ray<Double>> {
      * @param ctxt AwtContext
      * @param ray Ray to draw
      */
-    private void regular(final Graphics2D graphics, final Surface ctxt,
-        final Ray<Double> ray) {
+    private void regular(final Graphics2D graphics, final Surface ctxt, final Ray<Double> ray) {
         final int width = ctxt.width();
         final Field<Double> field = this.field();
         final Double xdir = field.actual(ray.direction().coords()[0]);
@@ -84,9 +77,7 @@ public final class AwtRay extends AbstractAwtPaint<Ray<Double>> {
         if (xdir > 0) {
             finish = new Point(width, 0);
         }
-        final Point end = transform.transform(
-            new InLinePoint<Double>(new RayLine<>(ray), transform.inverse(finish).xcoor())
-        );
+        final Point end = transform.transform(new InLinePoint<Double>(new RayLine<>(ray), transform.inverse(finish).xcoor()));
         graphics.drawLine(origin.x, origin.y, end.x, end.y);
     }
 
@@ -96,8 +87,7 @@ public final class AwtRay extends AbstractAwtPaint<Ray<Double>> {
      * @param ray Ray to draw
      * @param context AwtContext
      */
-    private void vertical(final Graphics2D graphics, final Ray<Double> ray,
-        final Surface context) {
+    private void vertical(final Graphics2D graphics, final Ray<Double> ray, final Surface context) {
         final Field<Double> field = this.field();
         final Transform transform = new Transform(context);
         final Point origin = transform.transform(ray.origin());
@@ -107,5 +97,4 @@ public final class AwtRay extends AbstractAwtPaint<Ray<Double>> {
             graphics.drawLine(origin.x, origin.y, origin.x, context.height());
         }
     }
-
 }

@@ -74,11 +74,6 @@ public final class Slope<T> implements Scalar<T> {
 
     @Override
     public T value(final Field<T> field) {
-        if (!new Vertical<>(this.line).resolve(field)) {
-            final Scalar<T>[] coords = this.line.direction().coords();
-            return field.actual(new Division<T>(coords[1], coords[0]));
-        }
-        throw new IllegalStateException("Line has infinite slope.");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

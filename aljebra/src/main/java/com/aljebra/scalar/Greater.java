@@ -56,10 +56,6 @@ public final class Greater<T> extends OrderedScalar<T> {
 
     @Override
     public T value(final OrderedField<T> field) {
-        if (!this.generated.isPresent()) {
-            this.generated = Optional.of(field.greater(this.lower));
-        }
-        return field.actual(this.generated.get());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

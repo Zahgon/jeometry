@@ -59,10 +59,6 @@ public final class PointInCircle<T> implements Predicate<Field<T>> {
 
     @Override
     public boolean resolve(final Field<T> field) {
-        return field.equals(
-            this.circle.radius(),
-            new Norm<T>(new Minus<T>(this.point, this.circle.center()))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

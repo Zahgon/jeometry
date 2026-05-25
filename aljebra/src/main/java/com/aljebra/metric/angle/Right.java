@@ -36,7 +36,6 @@ public final class Right<T> implements Degrees<T> {
 
     @Override
     public Number resolve(final InnerProduct<T> product) {
-        return Math.PI / 2;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }
